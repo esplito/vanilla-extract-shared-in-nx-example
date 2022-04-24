@@ -9,6 +9,8 @@
   },
   "private": true,
   "dependencies": {
+    "@vanilla-extract/css": "^1.7.0",
+    "@vanilla-extract/webpack-plugin": "^2.1.8",
     "core-js": "^3.6.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",
@@ -47,5 +49,8 @@
     "ts-jest": "27.1.4",
     "ts-node": "9.1.1",
     "typescript": "~4.6.2"
-  }
+  },
+  "workspaces": [
+    "libs/shared-styling"
+  ]
 }
