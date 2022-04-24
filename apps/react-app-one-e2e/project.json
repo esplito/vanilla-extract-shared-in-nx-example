@@ -1,0 +1,28 @@
+{
+  "root": "apps/react-app-one-e2e",
+  "sourceRoot": "apps/react-app-one-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/react-app-one-e2e/cypress.json",
+        "devServerTarget": "react-app-one:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "react-app-one:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/react-app-one-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["react-app-one"]
+}
